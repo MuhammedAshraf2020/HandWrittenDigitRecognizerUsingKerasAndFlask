@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+
+  <style>
+  @charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+  width: 1170px;
+  margin: auto;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/statics/home2.jpg");
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.welcome-text {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  margin: 20% 30%;
+  text-align: center;
+}
+.welcome-text h1 {
+  text-align: center;
+  color: #fff;
+  text-transform:none;
+  font-size: 45px;
+}
+
+
+.welcome-text a {
+  border: 1px solid #258486;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  color:#fff;
+  background:#1CABA9;
+}
+.welcome-text a:hover {
+  background:darkgray;
+  color:#fff;
+}
+@media (max-width:600px) {
+  .wrapper {
+    width: 100%;
+  }
+  img {
+    width: 1100px;
+  }
+  
+  .welcome-text {
+    width: 100%;
+    height: auto;
+    margin: 30% 0;
+  }
+  .welcome-text h1 {
+    font-size: 30px;
+  }
+}
+  
+  </style>
+</head>
+<body>
+    <header>
+  
+<div class="welcome-text">
+{%if data == 0 %}
+<h1> Predict : 0 </h1>
+{%elif data == 1%}
+<h1> Predict : 1 </h1>
+{%elif data == 2%}
+<h1> Predict : 2 </h1>
+{%elif data == 3%}
+<h1> Predict : 3 </h1>
+{%elif data == 4%}
+<h1> Predict : 4 </h1>
+{%elif data == 5%}
+<h1> Predict : 5 </h1>
+{%elif data == 6%}
+<h1> Predict : 6 </h1>
+{%elif data == 7%}
+<h1> Predict : 7 </h1>
+{%elif data == 8%}
+<h1> Predict : 8 </h1>
+{%elif data == 9%}
+<h1> Predict : 9 </h1>
+{%endif%}
+<a href="http://127.0.0.1:5000/hello">New predict</a>
+    </div>
+</header>
+
+</body>
+</html>
